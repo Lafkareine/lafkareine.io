@@ -13,6 +13,8 @@ import java.util.function.Consumer;
  *
  *
  * 複数の書き込みが同時に行われる場合、個別にsetを呼び出すのではなくtransactionを利用するほうが効率的です
+ * また、値が変更された直後にファイルへの書き込みが行われます
+ * 外部で値が変更された場合、reloadによって外部の変更を反映することができます
  * */
 public final class TinyDB {
     private final Path path;
