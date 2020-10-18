@@ -94,7 +94,7 @@ public final class TinyDB {
             }
             try {
                 Files.createDirectories(path.getParent());
-                Files.write(path, builder.toString().getBytes(), StandardOpenOption.CREATE,StandardOpenOption.TRUNCATE_EXISTING);
+                Files.write(path, builder.toString().getBytes());
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
