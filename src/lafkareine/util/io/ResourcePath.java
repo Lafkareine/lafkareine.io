@@ -22,4 +22,12 @@ public class ResourcePath {
         }
         return tmpPath;
     }
+
+    public static Path getJarPath(){
+        return getJarPath(ResourcePath.class);
+    }
+
+    public static Path getDefaultPackagePath(){
+        return getDefaultPackagePath(ResourcePath.class);
+    }
 }
